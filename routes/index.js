@@ -4,6 +4,8 @@ var admin = require("firebase-admin");
 
 
 var serviceAccount = require("../sushi-togheter-firebase-adminsdk-vcr5o-e6b54cfefe.json");
+serviceAccount.private_key_id=process.env["FB_PKEY_ID"]
+serviceAccount.private_key=process.env["FB_PKEY"]
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
