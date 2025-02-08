@@ -34,7 +34,7 @@ app.use(cors({
   origin: ['http://localhost:5173', 'https://mcmatthew.github.io'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
-app.use(logger('prod'));
+app.use(logger('short'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
